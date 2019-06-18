@@ -1,0 +1,47 @@
+$bp-largest: 64em;
+$bp-large: 56.25em;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Varela', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end];
+    grid-template-rows: repeat(4, minmax(25rem, min-content));
+    
+    border-left: 1px solid #000;
+    margin: 0 11.75rem;
+    padding: 0 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// .page {
+//     grid-column: center-start / center-end;
+//     grid-row: 1 / -1;
+//     padding: 0 2rem;
+// }

@@ -1,0 +1,17 @@
+{
+  "name": "danni-clone",
+  "version": "1.0.0",
+  "description": "Danni Wordpress Theme Clone",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "browser-sync start --server --files 'css/*.css' --browser 'firefox' -w",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "Andre Wicaksono",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all-v2": "",
+    "node-sass": ""
+  }
+}
